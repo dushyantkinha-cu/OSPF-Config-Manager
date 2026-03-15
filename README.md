@@ -16,7 +16,7 @@ This project provides a web-based, automated approach to managing, configuring, 
 
 ## Project Structure
 
-* `lab4main.py`: The core Flask application defining all web routes and tying the modules together.
+* `main.py`: The core Flask application defining all web routes and tying the modules together.
 * `database.py`: Handles SQLite database initialization and data transactions.
 * `getconfig.py`: Extracts and backs up running configurations using NAPALM.
 * `diffconfig.py`: Performs diff operations between saved and active configurations.
@@ -48,7 +48,7 @@ To run this project, ensure you have the following installed:
 1. **Initialize the Environment**: Ensure `sshInfo.json` is updated with your target router IPs and credentials.
 2. **Start the Web Server**: Run the main Flask application:
    ```bash
-   python3 lab4main.py
+   python3 main.py
    ```
 3. **Access the Dashboard**: Navigate to `http://localhost:80` (or your server's IP) in your web browser.
 4. **Deploy & Manage**: Use the UI to back up configurations, define OSPF parameters, push changes to the network, or run the automated migration script.
