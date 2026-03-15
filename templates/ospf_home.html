@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>OSPF Configuration</title></head>
+<body>
+    <h2>OSPF Configuration Dashboard</h2>
+    <h3>Step 1: Input Data for Each Router</h3>
+    <ul>
+        <li><a href="/ospf_input/198.51.100.1">Configure R1_Kinha (198.51.100.1)</a></li>
+        <li><a href="/ospf_input/198.51.101.2">Configure R2_Kinha (198.51.101.2)</a></li>
+        <li><a href="/ospf_input/172.16.1.3">Configure R3_Kinha (172.16.1.3)</a></li>
+        <li><a href="/ospf_input/198.51.101.4">Configure R4_Kinha (198.51.101.4)</a></li>
+    </ul>
+
+    <h3>Step 2: Deploy and Verify</h3>
+    <form action="/ospf_deploy" method="post">
+        <input type="submit" value="Deploy OSPF & Verify Connectivity">
+    </form>
+    
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

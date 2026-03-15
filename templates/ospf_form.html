@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>Configure {{ hostname }}</title></head>
+<body>
+    <h2>OSPF Settings for {{ hostname }}</h2>
+    <form action="/ospf_save" method="post">
+        <input type="hidden" name="hostname" value="{{ hostname }}">
+        
+        <h3>Login Credentials</h3>
+        <label>Username:</label><br>
+        <input type="text" name="username" value="admin" required><br>
+        <label>Password:</label><br>
+        <input type="password" name="password" value="password" required><br>
+        
+        <h3>OSPF Information</h3>
+        <label>OSPF Process ID:</label><br>
+        <input type="text" name="ospf_process" value="1" required><br>
+        
+        <label>Primary Area ID (Area 0 for R2/R3/R4, Area 1 for R1):</label><br>
+        <input type="text" name="ospf_area" required><br>
+
+        {% if '101.2' in hostname or '101.4' in hostname %}
+        <div style="background-color: #f0f0f0; padding: 10px; margin-top: 10px;">
+            <label><b>Secondary Area ID (Link to R1/Area 1):</b></label><br>
+            <input type="text" name="ospf_area_2" value="1"><br>
+            <small>Required for ABR configuration</small>
+        </div>
+        {% endif %}
+
+        <label>Loopback IP (e.g., 10.0.0.1/32):</label><br>
+        <input type="text" name="loopback_ip" required><br>
+        <br>
+        <input type="submit" value="Save Configuration">
+    </form>
+</body>
+</html>

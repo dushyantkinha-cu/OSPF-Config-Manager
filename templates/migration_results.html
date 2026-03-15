@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Migration Status</title>
+    <style>
+        .log-box {
+            background-color: #222;
+            color: #0f0;
+            padding: 15px;
+            font-family: monospace;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Maintenance Migration Status</h2>
+    
+    <div class="log-box">
+        {% for line in logs %}
+            <div>{{ line }}</div>
+        {% endfor %}
+    </div>
+
+    <h3 style="color: blue;">
+        {% if "Migration completed successfully" in logs %}
+            Migration completed successfully
+        {% endif %}
+    </h3>
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

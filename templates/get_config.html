@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configuration Backup Results</title>
+</head>
+<body>
+    <h2>Configuration Backup Complete</h2>
+    <p>The following files have been saved to the server:</p>
+    
+    <ul>
+        {% for file in filenames %}
+        <li>{{ file }}</li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>
