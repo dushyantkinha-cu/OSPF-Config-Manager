@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configuration Differences</title>
+    <style>
+        .diff-box {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2>Configuration Differences</h2>
+    <p>Comparing the most recent backup file vs. current running configuration.</p>
+
+    {% for item in diffs %}
+        <div class="diff-box">
+            <h3>{{ item.device }}</h3>
+            {% if item.status == 'Error' %}
+                <p class="error"><strong>Error:</strong> {{ item.output }}</p>
+            {% else %}
+                <pre>{{ item.output }}</pre>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>
