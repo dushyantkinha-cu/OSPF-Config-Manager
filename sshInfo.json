@@ -1,0 +1,30 @@
+{
+  "R1_Kinha": {
+    "device_type": "ios",
+    "hostname": "198.51.100.1",
+    "username": "admin",
+    "password": "password",
+    "secret": "password"
+  },
+  "R2_Kinha": {
+    "device_type": "ios",
+    "hostname": "198.51.101.2",
+    "username": "admin",
+    "password": "password",
+    "secret": "password"
+  },
+  "R3_Kinha": {
+    "device_type": "ios",
+    "hostname": "172.16.1.3",
+    "username": "admin",
+    "password": "password",
+    "secret": "password"
+  },
+  "R4_Kinha": {
+    "device_type": "ios",
+    "hostname": "198.51.101.4",
+    "username": "admin",
+    "password": "password",
+    "secret": "password"
+  }
+}
